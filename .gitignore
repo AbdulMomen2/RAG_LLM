@@ -1,0 +1,32 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Data files
+*.pkl
+*.pdf
+indexes/
+documents/
+
+# Log files
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
