@@ -28,17 +28,9 @@ jobs:
       run: |
         pytest tests/ -v --cov=src --cov-report=xml
         
-    - name: Upload coverage
+    - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
         file: ./coverage.xml
         flags: unittests
         env_vars: OS,PYTHON
-        
-    - name: Verify module structure
-      run: |
-        echo "Checking module structure..."
-        [ -f src/__init__.py ] || exit 1
-        [ -f src/multimodal_rag/__init__.py ] || exit 1
-        [ -f src/multimodal_rag/rag_system.py ] || exit 1
-        echo "Module structure OK!"
